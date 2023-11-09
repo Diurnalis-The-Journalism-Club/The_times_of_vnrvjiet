@@ -19,7 +19,7 @@ const Adata = () => {
 
   const getData= async()=>{
     // console.log(currArticle);
-    let response =  await fetch(`http://ec2-43-205-178-192.ap-south-1.compute.amazonaws.com:8080/diurnalis/article?category=${categoryParam}&id=${idParam}`);
+    let response =  await fetch(`https://backend.diurnalis.in:8080/diurnalis/article?category=${categoryParam}&id=${idParam}`);
     setCurrArticle(await response.json());
     // console.log(currArticle)
   

@@ -18,10 +18,10 @@ const ArticlesPage = () => {
   const [totalData,setTotalData] = useState(0);
 
   const getData= async()=>{
-    let response =  await fetch(`http://ec2-43-205-178-192.ap-south-1.compute.amazonaws.com:8080/diurnalis/articles?pageNum=${Number(pageParam)}&pageSize=${Number(dataPerPage)}&category=${categoryParam}`);
+    let response =  await fetch(`https://backend.diurnalis.in:8080/diurnalis/articles?pageNum=${Number(pageParam)}&pageSize=${Number(dataPerPage)}&category=${categoryParam}`);
     setArticleData(await response.json());
 
-    let total =  await fetch(`http://ec2-43-205-178-192.ap-south-1.compute.amazonaws.com:8080/diurnalis/totalsize?category=${categoryParam}`);
+    let total =  await fetch(`https://backend.diurnalis.in:8080/diurnalis/totalsize?category=${categoryParam}`);
     setTotalData(await total.json());
   }
 

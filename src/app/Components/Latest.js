@@ -11,7 +11,7 @@ const Latest = () => {
   const [articles, setArticles] = useState([])
 
   const getData= async()=>{
-    let response =  await fetch(`http://ec2-43-205-178-192.ap-south-1.compute.amazonaws.com:8080/diurnalis/latestarticles`);
+    let response =  await fetch(`https://backend.diurnalis.in:8080/diurnalis/latestarticles`);
     setArticles(await response.json());
   }
 
