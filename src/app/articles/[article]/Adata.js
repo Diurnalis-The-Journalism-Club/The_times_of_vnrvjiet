@@ -77,7 +77,7 @@ const Adata = () => {
         </div>
         <div className="flex flex-col text-xs text-gray-400 capitalize text-center py-4">
         <div className="overflow-hidden">
-          <Image src={currArticle.img}
+          <Image src={currArticle.img===''?'/articleImages/default.img.png':currArticle.img}
           width={1500}
           height={1500}
           alt={currArticle.imgDesc}

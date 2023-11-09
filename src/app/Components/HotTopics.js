@@ -64,7 +64,7 @@ const HotTopics = () => {
               <div key={index} className="flex flex-col justify-center items-center md:w-44 lg:w-52">
                 <div className="overflow-hidden rounded-md w-70 h-40 md:w-44 lg:w-52 md:h-32">
                   <Image
-                    src={article.img}
+                    src={article.img===''?'/articleImages/default.img.png':article.img}
                     height={100}
                     width={500}
                     alt={article.title}
