@@ -13,7 +13,7 @@ const TopStories = () => {
       const [articles, setArticles] = useState([])
 
       const getData= async()=>{
-        let response =  await fetch(`https://backend.diurnalis.in:8080/diurnalis/hottopics`);
+        let response =  await fetch(`https://diurnalis-backend.onrender.com/diurnalis/hottopics`);
         setArticles(await response.json());
       }
     

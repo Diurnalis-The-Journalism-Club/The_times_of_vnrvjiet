@@ -11,7 +11,7 @@ const Latest = () => {
   const [articles, setArticles] = useState([])
 
   const getData= async()=>{
-    let response =  await fetch(`https://backend.diurnalis.in:8080/diurnalis/latestarticles`);
+    let response =  await fetch(`https://diurnalis-backend.onrender.com/diurnalis/latestarticles`);
     setArticles(await response.json());
   }
 
